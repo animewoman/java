@@ -1,0 +1,21 @@
+<html>
+<body>
+   <div>Список сообщений</div>
+    <form method="get" action="/">
+        <input type="text" name="filter" value="{{filter}}">
+        <button type="submit">Найти</button>
+    </form>
+    {{#messages}}
+        <div>
+            {{#filename }}
+                <img style="width: 200px" src="/img/{{filename}}">
+            {{/filename}}
+        </div>
+        <div>
+            <span>{{text}}</span>
+            <strong>{{tag}}</strong>
+        </div>
+        <strong><------------------------------------></strong>
+    {{/messages}}
+</body>
+</html>
